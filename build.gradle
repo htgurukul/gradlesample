@@ -1,7 +1,7 @@
 group 'com.srcclr'
 //baseversion '1.0.0'
-
-version = '1.0.0' + System.getProperty("build.number")
+def envVars = System.getenv()
+version = '1.0.0' + envVars['BUILD_NUMBER']
 apply plugin: 'java'
 
 sourceCompatibility = 1.6
