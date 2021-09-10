@@ -30,7 +30,7 @@ dependencies {
 
 defaultTasks 'build'
 task EndTasking(type: Exec) {
-dependsOn updateTeamCityBuildNumber
+dependsOn 'updateTeamCityBuildNumber'
     commandLine 'ls', '-l', 'build/libs'
 }
 
