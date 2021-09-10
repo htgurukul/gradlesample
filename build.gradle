@@ -34,7 +34,6 @@ task EndTasking(type: Exec) {
 }
 
 task updateTeamCityBuildNumber(type: Exec) {
-    x=version
-    println $x
-    println "##teamcity[setParameter name='buildNumber' value='${x}']"
+    println $version
+    println "##teamcity[setParameter name='buildNumber' value='${version}']"
 }
