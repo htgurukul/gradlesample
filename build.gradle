@@ -35,5 +35,5 @@ dependsOn 'updateTeamCityBuildNumber'
 }
 
 task updateTeamCityBuildNumber(type: Exec) {
-   commandLine 'println', '##teamcity[setParameter name='buildNumber' value='${version}']'
+   commandLine 'echo', '##teamcity[setParameter name='env.buildNumber' value='${version}']'
 }
