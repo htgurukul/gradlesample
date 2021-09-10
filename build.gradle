@@ -1,5 +1,5 @@
 group 'com.srcclr'
-version '1.0-SNAPSHOT'
+version '1.0.0'
 
 apply plugin: 'java'
 
@@ -27,3 +27,6 @@ dependencies {
 }
 
 defaultTasks 'build'
+task EndTasking(type: Exec) {
+    commandLine 'ls -l build/libs'
+}
