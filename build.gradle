@@ -2,6 +2,7 @@ group 'com.srcclr'
 //baseversion '1.0.0'
 def envVars = System.getenv()
 version = '1.0.0' + '-' + envVars['BUILD_NUMBER']
+println "##teamcity[setParameter name='buildNumber' value='${version}']"
 apply plugin: 'java'
 
 sourceCompatibility = 1.6
