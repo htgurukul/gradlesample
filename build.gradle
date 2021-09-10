@@ -33,7 +33,8 @@ task EndTasking(type: Exec) {
     commandLine 'ls', '-l', 'build/libs'
 }
 
-//task updateTeamCityBuildNumber(type: Exec) {
-  //  println $version
-   // println "##teamcity[setParameter name='buildNumber' value='${version}']"
-//}
+task updateTeamCityBuildNumber(type: Exec) {
+dependsOn EndTasking
+println "version is now ${version}"
+    println "##teamcity[setParameter name='env.buildNumber' value='${version}']"
+}
