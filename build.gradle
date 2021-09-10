@@ -1,7 +1,7 @@
 group 'com.srcclr'
-baseversion '1.0.0'
+//baseversion '1.0.0'
 
-version = baseversion + System.getProperty("build.number")
+version = '1.0.0' + System.getProperty("build.number")
 apply plugin: 'java'
 
 sourceCompatibility = 1.6
