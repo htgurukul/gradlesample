@@ -28,5 +28,5 @@ dependencies {
 
 defaultTasks 'build'
 task EndTasking(type: Exec) {
-    commandLine 'ls -l build/libs'
+    commandLine 'ls', '-l', 'build/libs'
 }
