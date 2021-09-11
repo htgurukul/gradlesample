@@ -33,10 +33,10 @@ dependencies {
 
 defaultTasks 'build'
 task EndTasking(type: Exec) {
-//dependsOn 'updateTeamCityBuildNumber'
+dependsOn 'updateTeamCityBuildNumber'
     commandLine 'ls', '-l', 'build/libs'
 }
 
-//task updateTeamCityBuildNumber(type: Exec) {
- //  commandLine 'echo', '##teamcity[setParameter name='env.buildNumber' value='${version}']'
-//}
+task updateTeamCityBuildNumber(type: Exec) {
+   commandLine 'echo', '##teamcity[setParameter name='buildNumber' value='${version}']'
+}
