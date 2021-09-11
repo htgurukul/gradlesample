@@ -1,8 +1,8 @@
 group 'com.srcclr'
 
-tpbversion = '1.0.0'
+def tpbversion = '1.0.0'
 def envVars = System.getenv()
-tpversion = tpbversion + '-' + envVars['BUILD_ID']
+def tpversion = tpbversion + '-' + envVars['BUILD_ID']
 version = tpversion
 
 apply plugin: 'java'
