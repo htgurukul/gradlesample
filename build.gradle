@@ -2,7 +2,7 @@ group 'com.srcclr'
 
 def tpbversion = '1.0.0'
 def envVars = System.getenv()
-def tpversion = tpbversion + '-' + envVars['BUILD_ID']
+def tpversion = tpbversion + '-' + envVars['BUILD_NUMBER']
 version = tpversion
 baseVersion = tpbversion
 
